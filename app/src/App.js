@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from "redux";
+import axios from "axios";
+
+
+import { BookReducer as reducer } from './reducers/BookReducer';
+import BookList from './components/BookList';
+import FetchButton from '';
+
+
+
+const store = createStore(reducer, applyMiddleware(thunk));
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <h1>Lord of the Rings Books</h1>
+        <FetchButton />
+        <BookList />
+      </div>
+    </Provider>
   );
 }
 
