@@ -10,7 +10,7 @@ export const getBookData = () => dispatch => {
     dispatch({ type: FETCH_BOOKS });
   
   axios
-    .get("https://the-one-api.herokuapp.com/v1/book")
+    .get("https://the-one-api.herokuapp.com/v1")
     .then(res => {
       dispatch({ type: UPDATE_BOOKS, payload: res.data.book });
     })

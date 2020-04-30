@@ -16,8 +16,11 @@ function BookList(props) {
         <div className="error">{props.error}</div>
       ) : (
         props.book.map(book => (
-          <div>
-  
+          <div id='MainContainer'>
+            <div id ='Card'>
+              <div id='CardHeader'>The Title of the Selected book is:</div>
+              <div id='CardContent'></div>
+            </div>
           </div>
         ))
       )}

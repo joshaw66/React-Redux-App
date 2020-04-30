@@ -8,7 +8,7 @@ import axios from "axios";
 
 import { BookReducer as reducer } from './reducers/BookReducer';
 import BookList from './components/BookList';
-import FetchButton from '';
+import FetchData from './components/FetchData';
 
 
 
@@ -20,7 +20,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <h1>Lord of the Rings Books</h1>
-        <FetchButton />
+        <FetchData />
         <BookList />
       </div>
     </Provider>
