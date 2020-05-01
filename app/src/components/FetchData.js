@@ -1,6 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getBookData } from '../actions/action';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  border-radius: 12px;
+  padding: .5%;
+  color: black;
+  background-color: gold;
+
+  :hover {
+    color: red;
+    font-style: italic;
+  }
+`
+
 
 
 function FetchButton(props) {
@@ -13,9 +27,9 @@ function FetchButton(props) {
       {props.isFetching ? (
         <div></div>
       ) : (
-        <button variant="contained" color="primary" onClick={handleFetchData}>
-          Show LOTR Books
-        </button>
+        <Button variant="contained" color="primary" onClick={handleFetchData}>
+          Click the One Ring
+        </Button>
       )}
     </>
   );

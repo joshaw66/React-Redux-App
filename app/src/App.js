@@ -3,7 +3,6 @@ import "./App.css";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { createStore, applyMiddleware } from "redux";
-import axios from "axios";
 
 
 import { BookReducer as reducer } from './reducers/BookReducer';
