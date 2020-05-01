@@ -11,10 +11,10 @@ function FetchButton(props) {
   return (
     <>
       {props.isFetching ? (
-        <div>Fetch LOTR Book Data</div>
+        <div></div>
       ) : (
         <button variant="contained" color="primary" onClick={handleFetchData}>
-          Show LOTR Data
+          Show LOTR Books
         </button>
       )}
     </>

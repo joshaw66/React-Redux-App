@@ -15,11 +15,13 @@ function BookList(props) {
       {props.error ? (
         <div className="error">{props.error}</div>
       ) : (
-        props.book.map(book => (
+        props.docs.map(docs => (
           <div id='MainContainer'>
             <div id ='Card'>
-              <div id='CardHeader'>The Title of the Selected book is:</div>
-              <div id='CardContent'></div>
+              <div id='CardHeader'></div>
+              <div id='CardContent'>
+                {docs.name}
+              </div>
             </div>
           </div>
         ))
@@ -30,7 +32,7 @@ function BookList(props) {
 
 const mapStateToProps = state => {
   return {
-    book: state.book,
+    docs: state.book,
     error: state.error
   };
 };
